@@ -1,0 +1,85 @@
+@model ProjetMvcBeer.Models.BeerCategoryViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste de nos bières</h1>
+
+<p>
+    <a asp-action="Create">Ajouter une bière</a>
+</p>
+
+<form asp-controller="ProjetMvcBeer" asp-action="Index" method="get">
+    <p>
+
+        <select asp-for="BeerCategory" asp-items="Model.Category">
+            <option value="">Catégories</option>
+        </select>
+
+
+        Titre: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filtrer" />
+
+        <a asp-action="Index">Retour à la liste complète</a>
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beers[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beers[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beers[0].AlcoolDegree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beers[0].Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beers[0].Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Beers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlcoolDegree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Image)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BeerID">Editer</a> |
+                    <a asp-action="Details" asp-route-id="@item.BeerID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BeerID">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

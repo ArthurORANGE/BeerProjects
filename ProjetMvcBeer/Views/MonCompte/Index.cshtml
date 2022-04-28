@@ -1,0 +1,84 @@
+@model ProjetMvcBeer.Models.MonCompte
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="text-center">
+<div id="content" class="container p-0">
+    <div class="profile-header">
+        <div class="profile-header-cover"></div>
+        <div class="profile-header-content">
+            <div class="profile-header-img">
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
+            </div>
+            <div class="profile-header-info">
+                <h4 class="m-t-sm">Clyde Stanley</h4>
+                <p class="m-b-sm">UX/UI Designer</p>
+
+                <a class="btn btn-xs btn-primary mb-4" asp-controller="MonCompte" asp-action="Information" >A Propos De Moi</a>               
+            </div>
+        </div>
+
+
+        <ul class="profile-header-tab nav nav-tabs">
+            
+            <li class="nav-item"><a href="#profile-photos" class="nav-link active show" data-toggle="tab">Mes bières</a></li>
+            
+        </ul>
+    </div>
+    <table style="text-align: left; width: 20; height: 20;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+
+            <tr>
+            <td style="vertical-align: top;"><img src="Heineken.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="1664.png"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Chouffe.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Bud.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="vertical-align: top;"><img src="Corona.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Leffe.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Barbar.png"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="PaixDieu.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="vertical-align: top;"><img src="Duvel.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Kasteel.png"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="3Monts.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="TripleK.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="vertical-align: top;"><img src="Despe.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Gifle.png"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Belzebuth.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            <td style="vertical-align: top;"><img src="Trolls.jpg"alt="flex-end" class="d-block w-10"  width="300" height="300"><br>
+            </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    
+</div>
+</div>
+
